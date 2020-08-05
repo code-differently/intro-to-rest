@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.dtos;
+package com.stayready.poll_application.dtos;
 
 import java.util.Collection;
 
@@ -22,4 +22,4 @@ public class VoteResult {
     public void setResults(Collection<OptionCount> results) {
         this.results = results;
     }
-} */
+}

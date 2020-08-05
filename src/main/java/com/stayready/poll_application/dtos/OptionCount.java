@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.dtos;
+package com.stayready.poll_application.dtos;
 
 public class OptionCount {
 
@@ -20,4 +20,4 @@ public class OptionCount {
     public void setCount(int count) {
         this.count = count;
     }
-} */
+}

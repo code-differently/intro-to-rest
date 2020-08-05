@@ -1,6 +1,9 @@
-/*package com.stayready.poll_application.domain;
+package com.stayready.poll_application.domain;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
@@ -12,9 +15,13 @@ public class Poll {
     private Long id;
 
     @Column(name = "QUESTION")
+    @NotEmpty
     private String question;
 
-    @OneToMany(cascade = CascadeType.ALL) @JoinColumn(name = "POLL_ID") @OrderBy
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "POLL_ID")
+    @OrderBy
+    @Size(min=2, max = 6)
     private Set<Option> options;
 
     public Long getId() {
@@ -40,4 +47,4 @@ public class Poll {
     public void setOptions(Set<Option> newOpts) {
         options = newOpts;
     }
-} */
+}

@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.domain;
+package com.stayready.poll_application.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,4 +32,4 @@ public class Option {
     public void setValue(String newValue) {
         value = newValue;
     }
-} */
+}

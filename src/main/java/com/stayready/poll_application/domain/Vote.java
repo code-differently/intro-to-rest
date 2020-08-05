@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.domain;
+package com.stayready.poll_application.domain;
 
 import javax.persistence.*;
 
@@ -29,4 +29,4 @@ public class Vote {
     public void setOption(Option newOpt) {
         option = newOpt;
     }
-} */
+}

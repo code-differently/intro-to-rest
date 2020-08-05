@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.controller;
+package com.stayready.poll_application.controller;
 
 import com.stayready.poll_application.domain.Vote;
 import com.stayready.poll_application.repositories.VoteRepository;
@@ -39,4 +39,4 @@ public class VoteController {
     public Iterable<Vote> getVote(@PathVariable Long pollId) {
         return voteRepository.findVotesByPoll(pollId);
     }
-} */
+}

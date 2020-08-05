@@ -1,4 +1,4 @@
-/*package com.stayready.poll_application.domain;
+package com.stayready.poll_application.domain;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -63,4 +63,4 @@ public class VoteTest {
         // Then
         Assert.assertEquals(testOption, actual);
     }
-} */
+}
