@@ -1,4 +1,6 @@
 package com.stayready.poll_application;
 
-public class QuickPollApplicationTest {
+public class QuickPollApplicationTest 
+{
+
 }

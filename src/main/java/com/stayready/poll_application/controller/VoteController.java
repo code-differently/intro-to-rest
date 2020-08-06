@@ -3,6 +3,8 @@ package com.stayready.poll_application.controller;
 import com.stayready.poll_application.domain.Vote;
 import com.stayready.poll_application.repositories.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,8 +36,8 @@ public class VoteController
     }
 
     @RequestMapping(value="/polls/votes", method=RequestMethod.GET)
-    public Iterable<Vote> getAllVotes() {
-        return voteRepository.findAll();
+    public Page<Vote> getAllVotes(Pageable pageable) {
+        return voteRepository.findAll(pageable);
     }
 
     @RequestMapping(value="/polls/{pollId}/votes", method=RequestMethod.GET)

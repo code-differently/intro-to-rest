@@ -3,8 +3,9 @@ package com.stayready.poll_application.repositories;
 import com.stayready.poll_application.domain.Vote;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface VoteRepository extends CrudRepository<Vote,Long>
+public interface VoteRepository extends PagingAndSortingRepository<Vote,Long>
 {
     @Query(value = "SELECT v.* " +
             "FROM Option o, Vote v " +

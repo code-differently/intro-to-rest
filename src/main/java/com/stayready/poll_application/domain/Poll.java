@@ -22,7 +22,7 @@ public class Poll
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "POLL_ID")
     @OrderBy
-    @Size(min = 1,max = 6)
+    @Size(min = 2,max = 6)
     private Set<Option> options;
 
   
