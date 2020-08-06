@@ -2,7 +2,7 @@ package com.stayready.poll_application.domain;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class OptionTest {
     Option option;
@@ -12,16 +12,12 @@ public class OptionTest {
     }
 
     @Test
-    public void getIDTest() {
-        Long expected = 0L;
-
-        Long actual = option.getId();
-
-        assertEquals(expected, actual);
+    public void getIdTest() {
+        assertNull(option.getId());
     }
 
     @Test
-    public void setIDTest() {
+    public void setIdTest() {
         Long expected = 5L;
 
         option.setId(expected);
@@ -32,11 +28,7 @@ public class OptionTest {
 
     @Test
     public void getValueTest() {
-        String expected = "";
-
-        String actual = option.getValue();
-
-        assertEquals(expected, actual);
+        assertNull(option.getValue());
     }
 
     @Test
