@@ -15,16 +15,12 @@ public class PollTest {
     }
 
     @Test
-    public void getIDTest() {
-        Long expected = 0L;
-
-        Long actual = poll.getId();
-
-        assertEquals(expected, actual);
+    public void getIdTest() {
+        assertNull(poll.getId());
     }
 
     @Test
-    public void setIDTest() {
+    public void setIdTest() {
         Long expected = 5L;
 
         poll.setId(expected);
@@ -35,11 +31,7 @@ public class PollTest {
 
     @Test
     public void getQuestionTest() {
-        String expected = "";
-
-        String actual = poll.getQuestion();
-
-        assertEquals(expected, actual);
+        assertNull(poll.getQuestion());
     }
 
     @Test

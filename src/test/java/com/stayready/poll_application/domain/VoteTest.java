@@ -13,16 +13,12 @@ public class VoteTest {
     }
 
     @Test
-    public void getIDTest() {
-        Long expected = 0L;
-
-        Long actual = vote.getId();
-
-        assertEquals(expected, actual);
+    public void getIdTest() {
+        assertNull(vote.getId());
     }
 
     @Test
-    public void setIDTest() {
+    public void setIdTest() {
         Long expected = 5L;
 
         vote.setId(expected);
@@ -33,11 +29,7 @@ public class VoteTest {
 
     @Test
     public void getOptionTest() {
-        String optionExpectedValue = "";
-
-        String optionActualValue = vote.getOption().getValue();
-
-        assertEquals(optionExpectedValue, optionActualValue);
+        assertNull(vote.getOption());
     }
 
     @Test

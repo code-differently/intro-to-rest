@@ -8,10 +8,10 @@ public class Poll {
     @Id
     @GeneratedValue
     @Column(name = "POLL_ID")
-    private Long id = 0L;
+    private Long id;
 
     @Column(name = "QUESTION")
-    private String question = "";
+    private String question;
 
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="POLL_ID")
