@@ -83,31 +83,31 @@
 * _Repositories_ or [Data Access Objects (DAO)](https://en.wikipedia.org/wiki/Data_access_object), provide an abstraction for interacting with _datastores_.
 * Typically DAOs include an interface that provides a set of finder methods such as `findById`, `findAll`, for retrieving data, and methods to persist and delete data.
 * It is customary to have one `Repository` per `domain` object.
-* Create a sub-package of `io.zipcoder.tc_spring_poll_application` named `repositories`.
+* Create a sub-package of `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application` named `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.repositories`.
 
 
 ## Part 2.1 - Create interface `OptionRepository`
 
-* Create an `OptionRepository` interface in the `repositories` subpackage.
+* Create an `OptionRepository` interface in the `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.repositories` subpackage.
 * `OptionRepository` is a subclass of `CrudRepository<Option, Long>`
 
 
 ## Part 2.2 - Create interface `PollRepository`
 
-* Create a `PollRepository` interface in the `repositories` subpackage.
+* Create a `PollRepository` interface in the `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.repositories` subpackage.
 * `PollRepository` is a subclass of `CrudRepository<Poll, Long>`
 
 
 ## Part 2.3 - Create interface `VoteRepository`
 
-* Create a `VoteRepository` interface in the `repositories` subpackage.
+* Create a `VoteRepository` interface in the `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.repositories` subpackage.
 * `VoteRepository` is a subclass of `CrudRepository<Vote, Long>`
 
 # Part 3 - Controller Implementation
 
 * _Controllers_ provides all of the necessary [endpoints](https://en.wikipedia.org/wiki/Web_API#Endpoints) to access and manipulate respective domain objects.
 	*  REST resources are identified using URI endpoints.
-* Create a sub package of `io.zipcoder.tc_spring_poll_application` named `controller`.
+* Create a sub package of `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application` named `controller`.
 
 
 ## Part 3.1 - Create class `PollController`
@@ -485,7 +485,7 @@ Create a void method in `PollController` called `verifyPoll` that checks if a sp
 
 ## Part 5.3 - Create custom Error Responses
 
-Spring provides some built-in exception handling and error response, but we'll customize it a bit here. Create an `ErrorDetail` class in a new `io.zipcoder.tc_spring_poll_application.dto.error` package to hold relevant information any time an error occurs.
+Spring provides some built-in exception handling and error response, but we'll customize it a bit here. Create an `ErrorDetail` class in a new `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.dto.error` package to hold relevant information any time an error occurs.
 
 Fields (Don't forget to provide getters and setters):
 
@@ -524,7 +524,7 @@ Now it's time to make sure that all objects persisted to the database actually c
 
 ## Part 5.5 - Customizing validation errors
 
-In order to customize validation errors we'll need a class for error information. Create a `ValidationError` class in `io.zipcoder.tc_spring_poll_application.dto.error` with the following fields and appropriate getters and setters:
+In order to customize validation errors we'll need a class for error information. Create a `ValidationError` class in `io.zipcoder.tc_spring_poll_application.tc_spring_poll_application.dto.error` with the following fields and appropriate getters and setters:
 
 - `String code`
 - `String message`
