@@ -33,16 +33,15 @@ public class ErrorDetailTest {
 
         int actual = errorDetail.getStatus();
 
-        
-        assertNull(errorDetail.getStatus());
+        assertEquals(expected, actual);
     }
 
     @Test
     public void setStatusTest() {
-        String expected = "404";
+        int expected = 5;
 
-        errorDetail.setDetail(expected);
-        String actual = errorDetail.getDetail();
+        errorDetail.setStatus(5);
+        int actual = errorDetail.getStatus();
 
         assertEquals(expected, actual);
     }
@@ -58,6 +57,40 @@ public class ErrorDetailTest {
 
         errorDetail.setDetail(expected);
         String actual = errorDetail.getDetail();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getTimeStampTest() {
+        long expected = 0L;
+
+        long actual = errorDetail.getTimeStamp();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setTimeStampTest() {
+        long expected = 4L;
+
+        errorDetail.setTimeStamp(expected);
+        long actual = errorDetail.getTimeStamp();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getDeveloperMessageTest() {
+        assertNull(errorDetail.getDeveloperMessage());
+    }
+
+    @Test
+    public void setDeveloperMessageTest() {
+        String expected = "you should put another parenthesis in";
+
+        errorDetail.setDeveloperMessage(expected);
+        String actual = errorDetail.getDeveloperMessage();
 
         assertEquals(expected, actual);
     }
