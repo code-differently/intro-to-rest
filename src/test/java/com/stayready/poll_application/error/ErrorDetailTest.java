@@ -1,7 +1,14 @@
 package com.stayready.poll_application.error;
 
+import com.stayready.poll_application.dtos.error.ValidationError;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class ErrorDetailTest {
@@ -81,6 +88,21 @@ public class ErrorDetailTest {
     }
 
     @Test
+    public void getPathTest() {
+        assertNull(errorDetail.getPath());
+    }
+
+    @Test
+    public void setPathTest() {
+        String expected = "no path found";
+
+        errorDetail.setPath(expected);
+        String actual = errorDetail.getPath();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void getDeveloperMessageTest() {
         assertNull(errorDetail.getDeveloperMessage());
     }
@@ -93,5 +115,27 @@ public class ErrorDetailTest {
         String actual = errorDetail.getDeveloperMessage();
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getErrorsTest() {
+        int expectedSize = 0;
+
+        int actualSize = errorDetail.getErrors().size();
+
+        assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void setErrorsTest() {
+        int expectedSize = 1;
+        Map<String, List<ValidationError>> temp = new HashMap<>();
+        temp.put("field1", new ArrayList<ValidationError>());
+        temp.get("field1").add(new ValidationError());
+
+        errorDetail.setErrors(temp);
+        int actualSize = errorDetail.getErrors().size();
+
+        assertEquals(expectedSize, actualSize);
     }
 }
