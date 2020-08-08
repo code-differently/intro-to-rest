@@ -5,7 +5,7 @@ public class OptionCount {
     private int count;
 
     public Long getOptionId() {
-        return optionId;
+        return this.optionId;
     }
 
     public void setOptionId(Long optionId) {
@@ -13,7 +13,7 @@ public class OptionCount {
     }
 
     public int getCount() {
-        return count;
+        return this.count;
     }
 
     public void setCount(int count) {
