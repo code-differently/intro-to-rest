@@ -1,5 +1,6 @@
 package com.stayready.poll_application.domain;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +8,16 @@ import javax.persistence.Id;
 
 @Entity
 public class Option {
+=======
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+
+@Entity
+public class Option<String> {
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 
     @Id
     @GeneratedValue

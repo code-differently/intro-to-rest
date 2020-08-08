@@ -1,13 +1,23 @@
 package com.stayready.poll_application.controller;
 
 import com.stayready.poll_application.domain.Poll;
+<<<<<<< HEAD
 import com.stayready.poll_application.exception.ResourceNotFoundException;
+=======
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 import com.stayready.poll_application.repositories.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.*;
+=======
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -31,6 +41,7 @@ public class PollController {
     @RequestMapping(value="/polls", method=RequestMethod.POST)
     public ResponseEntity<?> createPoll(@RequestBody Poll poll) {
         poll = pollRepository.save(poll);
+<<<<<<< HEAD
         HttpHeaders responseHeaders = new HttpHeaders();
         URI newPollUri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -66,4 +77,17 @@ public class PollController {
             throw new ResourceNotFoundException("Poll with id " + pollId + " not found");
         }
     }
+=======
+        return new ResponseEntity<>(null, HttpStatus.CREATED);
+    }
+
+    private Poll poll;
+    URI newPollUri = ServletUriComponentsBuilder
+            .fromCurrentRequest()
+            .path("/{id}")
+            .buildAndExpand(poll.getId())
+            .toUri();
+        //return new ResponseEntity<>(HttpHeaders
+
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 }

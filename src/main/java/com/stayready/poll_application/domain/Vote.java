@@ -3,7 +3,11 @@ package com.stayready.poll_application.domain;
 import javax.persistence.*;
 
 @Entity
+<<<<<<< HEAD
 public class Vote {
+=======
+public class Vote<Option> {
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 
     @Id
     @GeneratedValue

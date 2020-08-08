@@ -1,5 +1,6 @@
 package com.stayready.poll_application.domain;
 
+<<<<<<< HEAD
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -8,6 +9,13 @@ import java.util.Set;
 
 @Entity
 public class Poll {
+=======
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+public class Poll<String, Set> {
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 
     @Id
     @GeneratedValue
@@ -23,7 +31,10 @@ public class Poll {
     }
 
     @Column(name = "QUESTION")
+<<<<<<< HEAD
     @NotEmpty
+=======
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
     private String question;
 
     public String getQuestion() {
@@ -37,8 +48,12 @@ public class Poll {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "POLL_ID")
     @OrderBy
+<<<<<<< HEAD
     @Size(min=2, max = 6)
     private Set<Option> option;
+=======
+    private Set option;
+>>>>>>> d7713af17b1ec37011acd3aac18c4df87cd1d097
 
     public Set getOption() {
         return option;
